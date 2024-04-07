@@ -72,3 +72,4 @@ C:\Users\ktchu\source\repos\APIAlamoArbitra\APIAlamoArbitra\obj\Debug\net6.0\ref
 C:\Users\ktchu\source\repos\APIAlamoArbitra\APIAlamoArbitra\obj\Debug\net6.0\APIAlamoArbitra.pdb
 C:\Users\ktchu\source\repos\APIAlamoArbitra\APIAlamoArbitra\obj\Debug\net6.0\APIAlamoArbitra.genruntimeconfig.cache
 C:\Users\ktchu\source\repos\APIAlamoArbitra\APIAlamoArbitra\obj\Debug\net6.0\ref\APIAlamoArbitra.dll
+C:\Users\ktchu\source\repos\APIAlamoArbitra\APIAlamoArbitra\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

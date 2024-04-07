@@ -12,6 +12,7 @@ using APIAlamoArbitra.Repositories;
 namespace APIAlamoArbitra.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class FacturacionController : ControllerBase
     {
@@ -29,62 +30,61 @@ namespace APIAlamoArbitra.Controllers
         public IConfiguration Configuration { get; }
 
         [HttpPost]
-        public async Task<ActionResult<List<ComprobanteResponse>>> PostFacturacion([FromBody] FacturacionDTO payload)
+        public async Task<ActionResult<ComprobanteResponse>> PostFacturacion([FromBody] FacturacionDTO payload)
         {
-            List<ComprobanteResponse> response = new List<ComprobanteResponse>();
-            bool dioError = false;
+            
 
             var ControllerName = HttpContext.GetEndpoint().DisplayName;
             string JsonBody = JsonConvert.SerializeObject(payload);
             Logger.Information("{ControllerName} - Body recibido: {JsonBody}", ControllerName, JsonBody);
 
-            //foreach (var item in payload.Items)
-            //{
-            //    item.Identificador = payload.Identificador;
-            //}
-
-            //foreach (var item in payload.MediosDePago)
-            //{
-            //    item.Identificador = payload.Identificador;
-            //}
-
+            
             FieldMapper mapping = new FieldMapper();
             if (!mapping.LoadMappingFile(AppDomain.CurrentDomain.BaseDirectory + @"\Services\FieldMapFiles\Facturacion.json"))
             {
-                response.Add(new ComprobanteResponse(new ComprobanteDTO((string?)payload
-                    .GetType()
-                    .GetProperty("Identificador")
-                    .GetValue(payload), "400", "Error de configuracion", "No se encontro el archivo de configuracion del endpoint", null)));
 
-                return response;
+                return BadRequest(new ComprobanteResponse(new ComprobanteDTO((string?)payload
+                    .GetType()
+                    .GetProperty("identificador")
+                    .GetValue(payload), "400", "Error de configuracion", "No se encontro el archivo de configuracion del endpoint", null)));
             };
 
 
             string errorMessage = await Repository.ExecuteSqlInsertToTablaSAR(mapping.fieldMap,
                                                                             payload,
-                                                                            payload.Identificador,
+                                                                            payload.identificador,
                                                                             Configuration["Facturacion:JobName"]);
             if (errorMessage != "")
             {
-                dioError = true;
-                response.Add(new ComprobanteResponse(new ComprobanteDTO(Convert.ToString(payload.Identificador, CultureInfo.CreateSpecificCulture("en-GB")), "400", "Bad Request", errorMessage, null)));
+                return BadRequest(new ComprobanteResponse(new ComprobanteDTO(Convert.ToString(payload.identificador, CultureInfo.CreateSpecificCulture("en-GB")), "400", "Bad Request", errorMessage, null)));
 
             }
             else
             {
-                response.Add(new ComprobanteResponse(new ComprobanteDTO(Convert.ToString(payload.Identificador, CultureInfo.CreateSpecificCulture("en-GB")), "200", "OK", errorMessage, null)));
+                return Ok(new ComprobanteResponse(new ComprobanteDTO(Convert.ToString(payload.identificador, CultureInfo.CreateSpecificCulture("en-GB")), "200", "OK", errorMessage, null)));
             };
 
 
-            JsonBody = JsonConvert.SerializeObject(response);
-            Logger.Information("{ControllerName} - Respuesta: {JsonBody}", ControllerName, JsonBody);
+            //JsonBody = JsonConvert.SerializeObject(response);
+            //Logger.Information("{ControllerName} - Respuesta: {JsonBody}", ControllerName, JsonBody);
 
-            if (dioError)
+        }
+
+        [HttpGet]
+        [Route("{identificador}")]
+        public async Task<ActionResult<ComprobanteResponse>> GetFacturacion(string identificador)
+        {
+            ComprobanteResponse respuesta = await Repository.GetTransaccion(identificador, "SAR_FCRMVH");
+
+            switch (respuesta.response.status)
             {
-                return BadRequest(response);
+                case "404":
+                    return NotFound(respuesta);
+                    break;
+                default:
+                    return Ok(respuesta);
+                    break;
             }
-
-            return Ok(response);
 
         }
 

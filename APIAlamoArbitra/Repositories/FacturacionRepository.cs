@@ -2,7 +2,7 @@
 {
     public class FacturacionRepository : RepositoryBase
     {
-        public FacturacionRepository(IConfiguration configuration, Serilog.ILogger logger) : base(configuration, logger)
+        public FacturacionRepository(IConfiguration configuration, Serilog.ILogger logger) : base(configuration)
         {
         }
 

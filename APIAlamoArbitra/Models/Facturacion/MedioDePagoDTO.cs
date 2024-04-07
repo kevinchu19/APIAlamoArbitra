@@ -2,12 +2,12 @@
 {
     public class MedioDePagoDTO
     {
-        public string? Identificador { get; set; }
-        public string TipoConcepto { get; set; }
-        public string CodigoConcepto { get; set; }
-        public decimal Importe { get; set; }
-        public string Observaciones { get; set; }
-        public int Cuotas { get; set; }
-        public string CodigoAutorizacion { get; set; }
+        public string? identificador { get; set; }
+        public string tipoConcepto { get; set; }
+        public string codigoConcepto { get; set; }
+        public decimal importe { get; set; }
+        public string observaciones { get; set; }
+        public int cuotas { get; set; }
+        public string codigoAutorizacion { get; set; }
     }
 }

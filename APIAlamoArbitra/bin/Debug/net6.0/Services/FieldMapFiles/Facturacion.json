@@ -11,28 +11,28 @@
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_IDENTI",
-            "PropertyName": "Identificador",
+            "PropertyName": "identificador",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_CODEMP",
-            "PropertyName": "Empresa",
+            "PropertyName": "empresa",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_CIRCOM",
-            "PropertyName": "CircuitoOrigen",
+            "PropertyName": "circuitoOrigen",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_CIRAPL",
-            "PropertyName": "CircuitoAplicacion",
+            "PropertyName": "circuitoAplicacion",
             "FixedValue": null,
             "Function": null
 
@@ -40,7 +40,7 @@
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_SUCURS",
-            "PropertyName": "PuntoDeVenta",
+            "PropertyName": "puntoDeVenta",
             "FixedValue": null,
             "Function": null
 
@@ -48,70 +48,70 @@
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "USR_FCRMVH_CODCOM",
-            "PropertyName": "ComprobanteVentas",
+            "PropertyName": "comprobanteVentas",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_FCHMOV",
-            "PropertyName": "FechaContable",
+            "PropertyName": "fechaContable",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_NROCTA",
-            "PropertyName": "Cliente",
+            "PropertyName": "cliente",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_CODLIS",
-            "PropertyName": "ListaPrecios",
+            "PropertyName": "listaPrecios",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_TEXTOS",
-            "PropertyName": "Texto",
+            "PropertyName": "texto",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_JURISD",
-            "PropertyName": "Jurisdiccion",
+            "PropertyName": "jurisdiccion",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "USR_FCRMVH_TIPEXP",
-            "PropertyName": "TipoExportacion",
+            "PropertyName": "tipoExportacion",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_NOMBRE",
-            "PropertyName": "NombreCliente",
+            "PropertyName": "nombreCliente",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_CNTPDC",
-            "PropertyName": "TipoDeDocumentoFacturacion",
+            "PropertyName": "tipoDeDocumentoFacturacion",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_NRODOC",
-            "PropertyName": "TipoDeDocumentoFacturacion",
+            "PropertyName": "tipoDeDocumentoFacturacion",
             "FixedValue": null,
             "Function": null
           },
@@ -119,56 +119,56 @@
           {
           "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
           "Field": "SAR_FCRMVH_NRODOC",
-          "PropertyName": "NumeroDeDocumentoFacturacion",
+          "PropertyName": "numeroDeDocumentoFacturacion",
           "FixedValue": null,
           "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_CONIVA",
-            "PropertyName": "CondicionDeIvaFacturacion",
+            "PropertyName": "condicionDeIvaFacturacion",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_DIRECC",
-            "PropertyName": "DireccionFacturacion",
+            "PropertyName": "direccionFacturacion",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_JURISD",
-            "PropertyName": "JurisdiccionFacturacion",
+            "PropertyName": "jurisdiccionFacturacion",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_CODPAI",
-            "PropertyName": "PaisFacturacion",
+            "PropertyName": "paisFacturacion",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_CODPOS",
-            "PropertyName": "CodigoPostalFacturacion",
+            "PropertyName": "codigoPostalFacturacion",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "USR_FCRMVH_CONTAC",
-            "PropertyName": "Email",
+            "PropertyName": "email",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVH_TELEFN",
-            "PropertyName": "Telefono",
+            "PropertyName": "telefono",
             "FixedValue": null,
             "Function": null
           },
@@ -234,77 +234,77 @@
     {
       "Table": "SAR_FCRMVI",
       "ParentTable": "SAR_FCRMVH",
-      "ParentProperty": "Items",
+      "ParentProperty": "items",
       "Fields": {
         "$type": "System.Collections.Generic.List`1[[APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra]], mscorlib",
         "$values": [
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_IDENTI",
-            "PropertyName": "Identificador",
+            "PropertyName": "identificador",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_NROITM",
-            "PropertyName": "Item",
+            "PropertyName": "item",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_TIPPRO",
-            "PropertyName": "TipoProducto",
+            "PropertyName": "tipoProducto",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_ARTCOD",
-            "PropertyName": "Producto",
+            "PropertyName": "producto",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_TIPCPT",
-            "PropertyName": "TipoConcepto",
+            "PropertyName": "tipoConcepto",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_CODCPT",
-            "PropertyName": "Concepto",
+            "PropertyName": "concepto",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_PRECIO",
-            "PropertyName": "Precio",
+            "PropertyName": "precio",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_CANTID",
-            "PropertyName": "Cantidad",
+            "PropertyName": "cantidad",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVI_TEXTOS",
-            "PropertyName": "Observaciones",
+            "PropertyName": "observaciones",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "USR_FCRMVI_NRORVA",
-            "PropertyName": "NumeroReserva",
+            "PropertyName": "numeroReserva",
             "FixedValue": null,
             "Function": null
           },
@@ -353,63 +353,63 @@
     {
       "Table": "SAR_FCRMVT",
       "ParentTable": "SAR_FCRMVH",
-      "ParentProperty": "MediosDePago",
+      "ParentProperty": "mediosDePago",
       "Fields": {
         "$type": "System.Collections.Generic.List`1[[APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra]], mscorlib",
         "$values": [
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVT_IDENTI",
-            "PropertyName": "Identificador",
+            "PropertyName": "identificador",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVT_NROITM",
-            "PropertyName": "Item",
+            "PropertyName": "item",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVT_TIPCPT",
-            "PropertyName": "TipoConcepto",
+            "PropertyName": "tipoConcepto",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVT_CODCPT",
-            "PropertyName": "CodigoConcepto",
+            "PropertyName": "codigoConcepto",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVT_IMPORT",
-            "PropertyName": "Importe",
+            "PropertyName": "importe",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "SAR_FCRMVT_TEXTOS",
-            "PropertyName": "Observaciones",
+            "PropertyName": "observaciones",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "USR_FCRMVT_CUOTAS",
-            "PropertyName": "Cuotas",
+            "PropertyName": "cuotas",
             "FixedValue": null,
             "Function": null
           },
           {
             "$type": "APIAlamoArbitra.Services.Entities.FieldValue, APIAlamoArbitra",
             "Field": "USR_FCRMVT_AUTPOS",
-            "PropertyName": "CodigoAutorizacion",
+            "PropertyName": "codigoAutorizacion",
             "FixedValue": null,
             "Function": null
           },

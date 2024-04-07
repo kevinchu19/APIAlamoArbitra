@@ -2,14 +2,14 @@
 {
     public class ItemDTO
     {
-        public string? Identificador { get; set; }
-        public string TipoProducto { get; set; }
-        public string Producto { get; set; }
-        public string TipoConcepto { get; set; }
-        public string Concepto { get; set; }
-        public decimal Precio { get; set; }
-        public decimal Cantidad { get; set; }
-        public string Observaciones { get; set; }
-        public string NumeroReserva { get; set; }
+        public string? identificador { get; set; }
+        public string tipoProducto { get; set; }
+        public string producto { get; set; }
+        public string tipoConcepto { get; set; }
+        public string concepto { get; set; }
+        public decimal precio { get; set; }
+        public decimal cantidad { get; set; }
+        public string observaciones { get; set; }
+        public string numeroReserva { get; set; }
     }
 }
