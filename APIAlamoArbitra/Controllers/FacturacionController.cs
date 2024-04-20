@@ -8,12 +8,13 @@ using APIAlamoArbitra.Models.Response.Comprobante;
 using APIAlamoArbitra.Models.Pedidos;
 using APIAlamoArbitra.Services;
 using APIAlamoArbitra.Repositories;
+using APIAlamoArbitra.Services.ApiKey;
 
 namespace APIAlamoArbitra.Controllers
 {
     [ApiController]
-    [Authorize]
     [Route("api/[controller]")]
+    [ApiKey]
     public class FacturacionController : ControllerBase
     {
 
@@ -29,7 +30,9 @@ namespace APIAlamoArbitra.Controllers
         public FacturacionRepository Repository { get; }
         public IConfiguration Configuration { get; }
 
+        
         [HttpPost]
+        
         public async Task<ActionResult<ComprobanteResponse>> PostFacturacion([FromBody] FacturacionDTO payload)
         {
             
@@ -70,6 +73,7 @@ namespace APIAlamoArbitra.Controllers
 
         }
 
+        
         [HttpGet]
         [Route("{identificador}")]
         public async Task<ActionResult<ComprobanteResponse>> GetFacturacion(string identificador)

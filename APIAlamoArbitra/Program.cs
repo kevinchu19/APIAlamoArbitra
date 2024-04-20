@@ -1,5 +1,7 @@
 using APIAlamoArbitra.Exceptions;
+using APIAlamoArbitra.Models.Apikey;
 using APIAlamoArbitra.Repositories;
+using APIAlamoArbitra.Services.ApiKey;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
@@ -16,8 +18,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Repositorys
 builder.Services.AddScoped<FacturacionRepository>();
-builder.Services.AddScoped<LoginRepository>();
 
+//ApiKeyValidation
+builder.Services.AddTransient<IApiKeyValidation, ApiKeyValidation>();
+builder.Services.AddScoped<ApiKeyAuthFilter>();
+builder.Services.AddHttpContextAccessor();
 
 var columnOptions = new ColumnOptions
 {
@@ -61,23 +66,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var key = builder.Configuration["key"];
-builder.Services.AddAuthentication(x =>
-{
-    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(x =>
-{
-    x.RequireHttpsMetadata = false;
-    x.SaveToken = true;
-    x.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)),
-        ValidateIssuer = false,
-        ValidateAudience = false
-    };
-});
 
 var app = builder.Build();
 
@@ -91,6 +79,7 @@ if (app.Environment.IsDevelopment())
 //app.UseHttpsRedirection();
 
 app.UseAuthentication();
+app.UseRouting();
 
 app.UseAuthorization();
 
